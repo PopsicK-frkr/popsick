@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "Modesto";
+    src: url("./fonts/modesto-condensed-bold.ttf");
+  }
+  @font-face {
+    font-family: "Gothic";
+    src: url("./fonts/century-gothic.ttf");
+  }
