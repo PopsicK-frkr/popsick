@@ -171,6 +171,16 @@ const TamagotchiGame = () => {
     setIsOpen(true);
   };
 
+  // reset
+  const resetGame = () => {
+    setHealth(100);
+    setHappiness(100);
+    setHunger(100);
+    setIsDead(false);
+    setIsOpen(false);
+    setSpeed(1);
+  };
+
   return (
     <div className="flex flex-col mt-20 mb-60">
       <div className="modal-container">
@@ -252,11 +262,17 @@ const TamagotchiGame = () => {
           className="text-3xl text-white hover:text-violet-500 cursor-pointer fas fa-bars absolute top-2 left-[398px]"
         ></i>
         {isDead && (
-          <div className="absolute top-20 items-center border-4 border-y-teal-700 border-x-teal-500 bg-gradient-to-b from-[#0A0C0F] to-[#101820]">
-            <div className="text-6xl text-red-600 font-bold p-2 mb-1">
-              Game over!
+          <button
+            onClick={() => resetGame()}
+            className="absolute top-16 items-center border-4 border-y-teal-700 border-x-teal-500 bg-gradient-to-b from-[#0A0C0F] to-[#101820]"
+          >
+            <div className="p-4">
+              <div className="text-6xl text-red-600 font-bold">Game over!</div>
+              <div className="text-2xl text-white font-bold mt-2">
+                Click HERE to reset the game
+              </div>
             </div>
-          </div>
+          </button>
         )}
         <div className="text-3xl font-bold w-[400px] my-2">
           <em className="text-teal-500 text-2xl">Name:</em> {name}
