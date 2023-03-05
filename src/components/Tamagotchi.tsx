@@ -95,8 +95,8 @@ const TamagotchiGame = () => {
     }
   };
 
-  // variabile per il tempo randomico tra 1 e 60000 / 1 minuto
-  const getRandomTime = () => Math.floor((Math.random() * 60000) / speed) + 1;
+  // variabile per il tempo randomico tra 1 e 120000 / 2 minuti
+  const getRandomTime = () => Math.floor(Math.random() * 120000) + 1;
 
   // generare imprevisti random
   const generateRandomEvent = () => {
@@ -185,7 +185,7 @@ const TamagotchiGame = () => {
     <div className="flex flex-col mt-20 mb-60">
       <div className="modal-container">
         <Modal
-          className="w-[310px] h-[310px] mx-auto text-white mt-80 border-4 bg-gradient-to-b p-10 from-[#0A0C0F] to-[#101820]"
+          className="w-[310px] h-[310px] mx-auto text-white mt-[300px] border-4 bg-gradient-to-b p-10 from-[#0A0C0F] to-[#101820]"
           isOpen={isOpen}
           onRequestClose={() => setIsOpen(false)}
           contentLabel="Settings Modal"
@@ -226,13 +226,13 @@ const TamagotchiGame = () => {
             </button>
             <button
               className="p-1 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 ml-3"
-              onClick={() => setSpeed(2.5)}
+              onClick={() => setSpeed(3)}
             >
               Fast
             </button>
             <button
               className="p-1 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 ml-3"
-              onClick={() => setSpeed(5)}
+              onClick={() => setSpeed(6)}
             >
               Very Fast
             </button>
