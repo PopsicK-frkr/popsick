@@ -172,7 +172,7 @@ const TamagotchiGame = () => {
   };
 
   return (
-    <div className="flex flex-col -mt-3 mb-60">
+    <div className="flex flex-col mt-20 mb-60">
       <div className="modal-container">
         <Modal
           className="w-[310px] h-[310px] mx-auto text-white mt-80 border-4 bg-gradient-to-b p-10 from-[#0A0C0F] to-[#101820]"
@@ -234,7 +234,7 @@ const TamagotchiGame = () => {
         {showAlert ? (
           <div
             className={
-              "text-white px-6 py-4 w-[350px] absolute mb-4 right-12 top-[305px] bg-gradient-to-b from-[#0A0C0F] to-[#101820] border-4 border-y-teal-700 border-x-teal-500"
+              "text-white px-6 py-4 w-[370px] absolute mb-4 right-10 top-[316px] bg-gradient-to-b from-[#0A0C0F] to-[#101820] border-4 border-y-teal-700 border-x-teal-500"
             }
           >
             <div className="text-xl mr-5">
